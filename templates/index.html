@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Medical Insurance Cost Prediction</title>
+</head>
+<body>
+
+  <div class="container" id="home">
+    <!-- <img src="/static/background.jpg" alt="" style="height: 100vh; width: 100%;"> -->
+    <div class="hero">
+      <h1>Welcome to the My Project</h1><br>
+      <i class="fa-duotone fa-solid fa-suitcase-medical" style="color: black;"></i>
+      <h1>Medical Cost Insurance Prediction</h1>
+    </div>
+    <header class="navbar">
+
+      <a href="">Home</a>
+      <a href="#about">About us</a>
+      <a href="#prediction">Prdiction</a>
+      <a href="{{ url_for('header') }}">more details</a>
+      <div class="nav-search">
+      <input class="search-input" type="text" placeholder="search">
+      <div class="search-icon">
+      <i class="fa-brands fa-searchengin"></i>
+    </div>
+  </div>
+    </header>
+  </div>
+  
+    <h1 class="h1" id="prediction">predict the cost</h1>
+    <div class = " head">
+      <form action="/predict" method="post">
+        <label for="age" >Age</label> <input type="number" class="age" name="age" id="age" placeholder="enter the age of the patient" min_value = 0 , max_value=120 > <br> <br>
+        <label for="bmi" >BMI</label><input type="number" class="bmi" name="bmi" id = "bmi" placeholder="Enter the BMI ofthe patient"  min_value = 10 , max_value = 50 ><br> <br>
+        <label for="children" >children</label><input type="number" class="children" name="children" id =  "children" placeholder="how many children of the patient" min_value  = 0, max_value =7 > <br> <br>
+        <label >select region</label><select  class =" region" name="region" >
+            <option value="southeast">southeast</option>
+            <option value="southwest">southwest</option>
+            <option value="northeast">northeast</option>
+            <option value="northwest">northwest</option>
+        </select> <br> <br>
+        <label >Select smoker</label><select class="smoker" name="smoker">
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+      </select> <br> <br>
+        
+        <label >Select gender</label><select class="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select> <br> <br>
+        <input type="submit" class="btn" value="predict">
+        <h1 class="pre">{{prediction}}</h1>
+      </form>
+    </div>
+  
+  <div class="footer" id="about"></div>
+<div class="text-about">
+      <p>About us</p>
+</div> 
+<div class="about">
+  <h1>About us - Mediacal cost insurance prediction</h1>
+  <p>Welcome to our Medical Cost Insurance Prediction project!
+
+    We are a team of data science and machine learning enthusiasts dedicated to leveraging the power of AI to solve real-world problems. Our project focuses on predicting individual medical insurance costs based on various personal and lifestyle factors such as age, BMI, smoking status, and region.</p>
+  <h2>Project Goal:</h2> 
+  <p>Our aim is to help insurance companies, healthcare providers, and individuals better understand and anticipate medical expenses. By building a predictive model, we can offer insights into how different attributes affect insurance costs — enabling smarter pricing strategies and personalized planning.</p> 
+  <h2>What we did :</h2>
+  <ul>
+    <li>Collected and analyzed a medical cost dataset with demographic and health-related information.</li>
+    <li>Cleaned and preprocessed data for training.</li>
+    <li>Applied multiple machine learning models such as Linear Regression, Random Forest, and XGBoost.</li>
+    <li>Selected the best-performing model based on accuracy and interpretability.</li>
+    <li>Deployed the model using a web interface for easy predictions.</li>
+  </ul>
+  <h2>Technolgies used</h2>
+  <ul>
+    <li>Python (Pandas, NumPy, Scikit-learn, Matplotlib)</li>
+    <li>Machine Learning algorithms</li>
+    <li>Flask for web interface</li>
+    <li>HTML?CSS (for frontend styling)</li>
+  </ul>
+  <h2>Our Vision</h2>
+  <p>We believe predictive analytics in healthcare can play a crucial role in financial planning and preventative care. Through this project, we aim to demonstrate how data-driven decisions can lead to more transparency, fairness, and efficiency in the health insurance industry.</p>
+</div>
+</body>
+</html>

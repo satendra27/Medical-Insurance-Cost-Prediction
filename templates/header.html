@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Document</title>
+</head>
+<body id="more">
+<div class="more">
+    <h1>Medical Cost Insurance Prediction</h1>
+   </div>
+<div class="mk">
+   <div class="detail">
+    <i class="fa-duotone fa-solid fa-head-side-brain"></i>
+    <h2>Project Objective :</h2>
+    <p>The goal of this project is to develop a machine learning model that predicts the medical insurance charges of an individual based on their personal and lifestyle features. <br>
+        This helps both insurance providers and customers estimate costs more accurately and make better decisions.</p>
+    <h2>Dataset Description:</h2>
+    <p>We use a publicly available dataset (usually from Kaggle or similar), with the following features:<br>
+        Feature	: = Description<br>
+        age	: =     Age of the individual<br>
+        sex	Gender: (male/female)<br>
+        bmi:  =  	Body Mass Index<br>
+        children: =	Number of dependent children<br>
+        smoker: =	Smoking status (yes/no)<br>
+        region: =	Residential region<br>
+        charges: =  Target variable – medical cost</p>
+    <h2>Workflow & Components</h2>
+    <ol>
+        <li>Data Preprocessing</li>
+        <ul>
+            <li>Handling categorical variables (one-hot encoding)</li>
+            <li>Normalizing numerical data (optional)</li>
+            <li>Checking for missing values</li>
+            <li>Exploratory data analysis with plots</li>
+        </ul>
+        <li>Model Training</li>
+        <ul>
+            <li>Algorithm tried
+                <ul>
+                    <li>Linear Regression</li>
+                    <li>Random Forest Regressor</li>
+                    <li>XGBoost</li>
+                </ul>
+            </li>
+            <li>Evaluation Metrics:
+                <ul>
+                    <li>R <sup>2</sup> Score</li>
+                    <li>Mean Absolute Error (MAE)</li>
+                    <li>Root Mean Squared Error (RMSE)</li>
+                </ul>
+            </li>
+        </ul>
+        <li>Model selection</li>
+        <ul>
+            <li>The model with the best accuracy and generalization is selected (often XGBoost or Random Forest for tabular data).</li>
+        </ul>
+    </ol>
+    <h2>Web App Implementation</h2>
+    <p>Built with Flask or Streamlit + HTML/CSS for a user-friendly interface.</p>
+    <h3>Pages:</h3>
+    <ul>
+        <li>Home – Welcome text + title</li>
+        <li>Prediction – Input fields for user data (age, BMI, etc.) → Predict cost</li>
+        <li>About Us – Team, goal, vision</li>
+        <li>More Details – Model info, visuals, dataset source</li>
+    </ul>
+    <h2>Technologi used</h2>
+    <ul>
+        <li>Python (Pandas, NumPy, Scikit-learn, XGBoost)</li>
+        <li>Matplotlib / Seaborn (for data visualization)</li>
+        <li>Flask / Streamlit (for the web interface)</li>
+        <li>HTML/CSS (UI layout)</li>
+        <li>Font Awesome (for icons)</li>
+    </ul>
+    <h2>Future Enhacement</h2>
+    <ul>
+        <li>Add user login and history tracking</li>
+        <li>Use real-time API data</li>
+        <li>Improve accuracy with more features (e.g. exercise, diet)</li>   
+        <li>Deploy on cloud (Heroku, Render, etc.)</li>
+    </ul>
+   </div>
+</div>
+</body>
+</html>
